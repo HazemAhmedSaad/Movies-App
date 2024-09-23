@@ -1,5 +1,5 @@
-const { log } = require("console");
 const express = require("express");
+var cors = require('cors')
 const server = express();
 
 var movies = [
@@ -384,6 +384,8 @@ var movies = [
     website: "https://movies.disney.com/the-lion-king",
   },
 ];
+
+server.use(cors());
 
 // Get all movies
 server.get("/movies", function (req, res) {

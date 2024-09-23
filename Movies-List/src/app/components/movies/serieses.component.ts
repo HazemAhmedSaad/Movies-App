@@ -11,13 +11,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './serieses.component.css'
 })
 export class SeriesesComponent {
-  seriesList: any[] = [];
+  seriesList: any = [];
   constructor(private seriesesService: SeriesesService) { }
 
   ngOnInit() {
     this.seriesesService.getAllSeries().subscribe((seriesData: any) => {
-      this.seriesList = seriesData.results;
-      console.log(seriesData);
+      this.seriesList = seriesData;
+      console.log(this.seriesList);
     });
   }
 }

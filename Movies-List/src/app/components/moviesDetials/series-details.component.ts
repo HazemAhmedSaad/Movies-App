@@ -16,14 +16,6 @@ export class SeriesDetailsComponent {
   constructor(private seriesDetailsService: SeriesesService, private route: ActivatedRoute) {
   }
   ngOnInit() {
-    // this.route.params.subscribe(params => {
-    //   this.seriesDetailsService.getSeriesDetails(params['id']).subscribe((seriesData: any) => {
-    //     this.seriesDetails = seriesData;
-    //     console.log(this.seriesDetails);
-    //   }
-    //   );
-    // });
-
     this.id = this.route.snapshot.params['id'];
     this.seriesDetailsService.getSeriesDetails(this.id).subscribe((seriesData: any) => {
       this.seriesDetails = seriesData;

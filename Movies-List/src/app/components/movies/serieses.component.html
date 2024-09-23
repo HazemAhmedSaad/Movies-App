@@ -5,11 +5,11 @@
       <a class="text-decoration-none" routerLink="/series-details/{{series.id}}">
 
         <div class="card">
-          <img [src]="'https://image.tmdb.org/t/p/w500/' + [series.poster_path || series.backdrop_path]"
+          <img [src]="series.poster"
             class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{series.name}}</h5>
-            <p class="card-text">{{series.vote_average}}</p>
+            <h5 class="card-title">{{series.title}}</h5>
+            <p class="card-text">{{series.director}}</p>
             <p>{{series.first_air_date}}</p>
           </div>
         </div>

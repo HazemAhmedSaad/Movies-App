@@ -9,10 +9,10 @@ export class SeriesesService {
   apiKey: string = "03861000422926c11be27fbb2aea0030";
   constructor(private http: HttpClient) { }
   getAllSeries() {
-    return this.http.get(`https://api.themoviedb.org/3/tv/popular?api_key=${this.apiKey}&language=en-US&page=1`);
+    return this.http.get(`http://localhost:3001/movies`);
   }
 
   getSeriesDetails(id: number) {
-    return this.http.get(`https://api.themoviedb.org/3/tv/${id}?api_key=${this.apiKey}&language=en-US`);
+    return this.http.get(`http://localhost:3001/movieDetails/${id}`);
   }
 }

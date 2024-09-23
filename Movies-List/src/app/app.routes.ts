@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { SeriesesComponent } from './components/serieses/serieses.component';
-import { SeriesDetailsComponent } from './components/series-details/series-details.component';
+import { SeriesesComponent } from './components/movies/serieses.component';
+import { SeriesDetailsComponent } from './components/moviesDetials/series-details.component';
 
 export const routes: Routes = [
   { path: "", component: SeriesesComponent },
